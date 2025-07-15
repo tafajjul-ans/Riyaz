@@ -126,17 +126,6 @@ th,td{border:1px solid var(--grey-line);padding:8px;text-align:center}
 .task-item:last-child {
   border-bottom: none;
 }
-button.primary {
-  background-color: #5e00a3;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  }
-.center-button {
-  display: block;
-  margin: 30px auto;
+
   text-align: center;
 }

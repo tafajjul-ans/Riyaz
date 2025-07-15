@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>History | Riyaz Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body onload="initHistory()">
+  <nav class="navbar">
+    <div class="nav-left">
+      <i class="fa fa-user-circle"></i>
+      <span id="navUser">Guest</span>
+    </div>
+    <div class="nav-right">
+      <i class="fa fa-bars" id="menuBtn" onclick="toggleMenu()"></i>
+      <ul id="menuList" class="hidden">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+        <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>📜 Practice History</h2>
+    <canvas id="progressChart" height="200"></canvas>
+        <canvas id="timeChart" height="200" class="chart-container"></canvas>
+    <table id="historyTable">
+      <thead><tr><th>Date</th><th>Tasks</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

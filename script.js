@@ -126,7 +126,8 @@ getHist().forEach(entry => {
   const totalMinutes = entry.tasks
     .filter(t => t.startsWith("✅"))
     .reduce((sum, task) => {
-      const match = task.match(/(\d+)m/);
+      const match = task.match(/(\d+)\s*(min|mins|minutes)?/i);
+
       return sum + (match ? parseInt(match[1]) : 0);
     }, 0);
   timeLabels.push(entry.date);

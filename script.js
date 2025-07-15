@@ -167,3 +167,20 @@ new Chart(ctx2, {
     }
   }
 });
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  const installBtn = document.createElement('button');
+  installBtn.textContent = '📲 Install Riyaz Tracker';
+  installBtn.style = "position:fixed;bottom:20px;right:20px;padding:10px;background:#5e00a3;color:white;border:none;border-radius:5px;";
+  document.body.appendChild(installBtn);
+
+  installBtn.addEventListener('click', () => {
+    deferredPrompt.prompt();
+    installBtn.remove();
+  });
+});
+
